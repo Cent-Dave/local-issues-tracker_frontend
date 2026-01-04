@@ -1,6 +1,4 @@
-/* ===============================
-   COLOR PALETTE
-================================ */
+/* COLOR PALETTE */
 :root {
   --color-1: #2c3e50; /* Sidebar background / Dark Blue */
   --color-2: #1abc9c; /* Active link / Buttons / Green */
@@ -16,9 +14,7 @@
   --color-resolved: #2ecc71;
 }
 
-/* ===============================
-   RESET & BASE
-================================ */
+/* RESET & BASE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,9 +30,7 @@ body {
   color: var(--color-text);
 }
 
-/* ===============================
-   SIDEBAR
-================================ */
+/* SIDEBAR */
 .sidebar {
   width: 250px;
   background-color: var(--color-1);
@@ -53,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  gap: 10px;
 }
 
 .sidebar-logo {
@@ -92,9 +87,7 @@ body {
   text-decoration: none;
 }
 
-/* ===============================
-   MAIN CONTENT
-================================ */
+/* MAIN CONTENT */
 .main-content {
   margin-left: 250px;
   padding: 30px;
@@ -108,9 +101,7 @@ body {
   color: var(--color-1);
 }
 
-/* ===============================
-   FORM STYLES
-================================ */
+/* FORM STYLES */
 .form-section,
 .admin-pin-section,
 .admin-dashboard {
@@ -156,14 +147,16 @@ body {
   background-color: var(--color-5);
 }
 
+.btn-submit:active {
+  background-color: var(--color-4);
+}
+
 .form-message {
   margin-top: 15px;
   font-weight: bold;
 }
 
-/* ===============================
-   ISSUES LIST STYLES
-================================ */
+/* ISSUES LIST STYLES */
 .issues-container,
 .admin-issues-container {
   display: flex;
@@ -198,9 +191,7 @@ body {
   opacity: 0.3;
 }
 
-/* ===============================
-   SELECT & BUTTONS IN ADMIN DASHBOARD
-================================ */
+/* SELECT & BUTTONS IN ADMIN DASHBOARD */
 .admin-issues-container select {
   padding: 6px 8px;
   margin-right: 10px;
@@ -223,9 +214,7 @@ body {
   background-color: var(--color-6);
 }
 
-/* ===============================
-   LINKS
-================================ */
+/* LINKS */
 a {
   color: var(--color-2);
   text-decoration: none;
@@ -337,9 +326,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-/* ===============================
-   FOOTER
-================================ */
+/* FOOTER */
 .footer {
   background-color: var(--color-1);
   color: var(--color-white);
@@ -408,9 +395,7 @@ a:hover {
   padding-top: 10px;
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================ */
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
   .sidebar {
     position: relative;
@@ -441,9 +426,19 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-left: 0; /* remove any sidebar offset */
   }
 
   .footer-section {
     width: 100%;
+  }
+}
+/* FOOTER RESPONSIVE */
+@media (max-width: 600px) {
+  .footer-container {
+    width: 100%;
+    margin-left: 0; /* remove any sidebar offset */
+    text-align: center; /* center the text/icons */
+    box-sizing: border-box;
   }
 }

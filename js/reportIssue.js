@@ -7,10 +7,15 @@ const category = document.getElementById("category");
 const issueLocation = document.getElementById("location");
 const message = document.getElementById("message");
 
+const submitBtn = document.querySelector(".btn-submit");
+
 const API_BASE_URL = "https://community-issues-backend.onrender.com";
 
 issueForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting...";
 
   const issueData = {
     reporterName: reporterName.value,
@@ -42,4 +47,5 @@ issueForm.addEventListener("submit", async (e) => {
     message.textContent = "Error! Issue was not submitted";
     message.style.color = "red";
   }
+  submitBtn.textContent = "Submit";
 });
