@@ -1,11 +1,18 @@
 const issuesContainer = document.getElementById("issuesContainer");
+const loadingSpinner = document.getElementById("loadingSpinner");
 
 const API_BASE_URL = "https://community-issues-backend.onrender.com";
 
 async function loadIssues() {
+  loadingSpinner.style.display = "flex";
+  issuesContainer.style.display = "none";
+
   try {
     const res = await fetch(`${API_BASE_URL}/api/issues`);
     const issues = await res.json();
+
+    loadingSpinner.style.display = "none";
+    issuesContainer.style.display = "flex";
 
     issuesContainer.innerHTML = "";
 

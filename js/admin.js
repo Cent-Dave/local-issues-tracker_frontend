@@ -4,6 +4,7 @@ const pinMessage = document.getElementById("pinMessage");
 const pinSection = document.getElementById("pinSection");
 const adminSection = document.getElementById("adminSection");
 const adminIssuesContainer = document.getElementById("adminIssuesContainer");
+const loadingSpinner = document.getElementById("loadingSpinner");
 
 const API_BASE_URL = "https://community-issues-backend.onrender.com";
 
@@ -21,9 +22,15 @@ function verifyPin() {
 
 // Load all issues for admin
 async function loadAdminIssues() {
+  loadingSpinner.style.display = "flex";
+  adminIssuesContainer.style.display = "none";
+
   try {
     const res = await fetch(`${API_BASE_URL}/api/issues`);
     const issues = await res.json();
+
+    loadingSpinner.style.display = "none";
+    adminIssuesContainer.style.display = "flex";
 
     adminIssuesContainer.innerHTML = "";
 
