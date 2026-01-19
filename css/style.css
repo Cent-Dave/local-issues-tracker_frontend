@@ -551,27 +551,27 @@ a:hover {
 }
 /* FOOTER RESPONSIVE FOR 600PX*/
 @media (max-width: 600px) {
+  .first-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .first-form > .form-section {
     width: 80%;
-    margin-top: 50px;
-    margin-bottom: 50px;
     padding-bottom: 10px;
-    height: 350px;
+    height: 360px;
     text-size-adjust: 70%;
   }
-
   .first-form h1 {
     margin-bottom: 30px;
   }
-
   .first-form .form-control,
   .first-form button {
     height: 30px;
     border-radius: 10px;
-    width: 200px;
+    width: 80%;
     margin-bottom: 5px;
   }
-
   .welcome-message {
     top: -40px;
     margin-left: -25px;
@@ -588,26 +588,3 @@ a:hover {
     box-sizing: border-box;
   }
 }
-/* 
-.first-form > .form-section {
-  width: 60%;
-  margin-top: 70px;
-  margin-bottom: 70px;
-  height: 430px;
-  text-align: center;
-}
-
-.first-form .form-control,
-.first-form button {
-  border-radius: 15px;
-  width: 680px;
-  margin-bottom: 10px;
-}
-
-.first-form h1 {
-  margin-bottom: 35px;
-}
-
-.first-form label {
-  display: block;
-} */
