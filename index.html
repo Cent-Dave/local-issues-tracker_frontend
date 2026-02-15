@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up - CommConnect</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <main class="first-form">
       <section class="form-section">
         <h1>Sign Up</h1>
+        <p>Create an account with CommConnect</p>
         <form id="signupForm">
           <div class="form-group">
             <label for="username">Username</label>
@@ -17,12 +22,18 @@
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              class="form-control"
-              required
-            />
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                minlength="8"
+                pattern=".*[!@#$%^&*_.,:;].*"
+                title="Password must contain at least one special character and be at least 8 characters long"
+                required
+              />
+              <i class="fa fa-eye" id="flipPassword"></i>
+            </div>
           </div>
           <button type="submit" id="signupBtn" class="btn-submit">
             Sign Up

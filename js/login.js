@@ -1,8 +1,20 @@
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
 const loginBtn = document.getElementById("loginBtn");
+const password = document.getElementById("password");
+const flipPassword = document.getElementById("flipPassword");
 
 const API_BASE_URL = "https://community-issues-backend.onrender.com";
+
+// View password functionaality
+flipPassword.addEventListener("click", () => {
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+
+  flipPassword.classList.toggle("fa-eye");
+  flipPassword.classList.toggle("fa-eye-slash");
+});
 
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();

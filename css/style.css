@@ -49,12 +49,32 @@ body {
   margin-bottom: 10px;
 }
 
+.first-form p {
+  margin-bottom: 15px;
+  font-size: smaller;
+  color: black;
+}
+
 .first-form h1 {
-  margin-bottom: 35px;
+  padding-bottom: 10px;
+  color: var(--color-2);
 }
 
 .first-form label {
   display: block;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+#flipPassword {
+  position: absolute;
+  right: 65px;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
 }
 
 .welcome-message {
@@ -508,7 +528,7 @@ a:hover {
   }
 }
 
-/* ===== Filters Section ===== */
+/* Filters Section */
 .filters {
   display: flex;
   margin-bottom: 1.5rem;
@@ -568,6 +588,13 @@ a:hover {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
+  .first-form .form-control,
+  .first-form button {
+    height: 40px;
+    border-radius: 10px;
+    width: 80%;
+    margin-bottom: 5px;
+  }
   .sidebar {
     position: relative;
     width: 100%;
@@ -604,7 +631,7 @@ a:hover {
     width: 100%;
   }
 }
-/* FOOTER RESPONSIVE FOR 600PX*/
+
 @media (max-width: 600px) {
   .first-form {
     display: flex;

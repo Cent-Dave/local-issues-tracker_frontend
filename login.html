@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - CommConnect</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <main class="first-form">
       <section class="form-section">
-        <h1>Login to CommConnect</h1>
+        <h1>CommConnect</h1>
+        <p>Login to gain access to your dashboard</p>
         <form id="loginForm">
           <div class="form-group">
             <label for="username">Username</label>
@@ -17,12 +22,15 @@
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              class="form-control"
-              required
-            />
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                required
+              />
+              <i class="fa fa-eye" id="flipPassword"></i>
+            </div>
           </div>
           <button type="submit" id="loginBtn" class="btn-submit">Login</button>
         </form>
